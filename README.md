@@ -121,7 +121,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/Ruvik1001/Software-engineering
+git clone https://github.com/Ruvik1001/Software-engineering.git
 cd Software_engineering
 ```
 
