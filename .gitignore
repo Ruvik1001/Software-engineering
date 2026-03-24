@@ -1,3 +1,5 @@
 .structurizr
 .structurizr/
 workspace.json
+.idea
+.idea/

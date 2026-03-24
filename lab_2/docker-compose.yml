@@ -1,0 +1,58 @@
+version: "3.9"
+
+services:
+  auth_service:
+    build: ./backend/auth_service
+    env_file:
+      - ./backend/auth_service/.env_example
+    ports:
+      - "8001:8000"
+
+  user_service:
+    build: ./backend/user_service
+    env_file:
+      - ./backend/user_service/.env_example
+    ports:
+      - "8002:8000"
+
+  goal_service:
+    build: ./backend/goal_service
+    env_file:
+      - ./backend/goal_service/.env_example
+    ports:
+      - "8003:8000"
+
+  task_service:
+    build: ./backend/task_service
+    env_file:
+      - ./backend/task_service/.env_example
+    ports:
+      - "8004:8000"
+
+  notification_service:
+    build: ./backend/notification_service
+    env_file:
+      - ./backend/notification_service/.env_example
+    ports:
+      - "8005:8000"
+
+  calendar_service:
+    build: ./backend/calendar_service
+    env_file:
+      - ./backend/calendar_service/.env_example
+    ports:
+      - "8006:8000"
+
+  proxy_service:
+    build: ./backend/proxy_service
+    env_file:
+      - ./backend/proxy_service/.env_example
+    depends_on:
+      - auth_service
+      - user_service
+      - goal_service
+      - task_service
+      - notification_service
+      - calendar_service
+    ports:
+      - "8000:8000"

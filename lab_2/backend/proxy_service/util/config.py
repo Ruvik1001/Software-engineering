@@ -1,0 +1,6 @@
+AUTH_URL = "http://auth_service:8000"
+USER_URL = "http://user_service:8000"
+GOAL_URL = "http://goal_service:8000"
+TASK_URL = "http://task_service:8000"
+NOTIFICATION_URL = "http://notification_service:8000"
+CALENDAR_URL = "http://calendar_service:8000"
