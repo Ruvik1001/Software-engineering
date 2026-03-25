@@ -2,7 +2,7 @@ from collections.abc import Generator
 
 from fastapi import Depends
 
-from implementation.repository import InMemoryUserRepository
+from implementation.in_memory_user_repository import InMemoryUserRepository
 from interface.repository import UserRepository
 from use_case.service import UserService
 

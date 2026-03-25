@@ -20,7 +20,7 @@ auth_router = APIRouter(tags=["auth"])
     "/auth/register",
     response_model=RegisterResponse,
     summary="Register user",
-    description="Creates a new user credential in auth service.",
+    description="Creates a new user credential in auth service (login is email).",
     responses={400: {"description": "Login already exists"}},
 )
 def register_endpoint(req: RegisterRequest, service: AuthService = Depends(get_auth_service)) -> RegisterResponse:
@@ -62,7 +62,7 @@ def refresh_endpoint(req: RefreshRequest, service: AuthService = Depends(get_aut
     "/auth/validate",
     response_model=ValidateResponse,
     summary="Validate access token",
-    description="Validates JWT token and returns authenticated login.",
+    description="Validates JWT token and returns authenticated user_id (JWT.sub).",
     responses={401: {"description": "Invalid token"}},
 )
 def validate_endpoint(req: ValidateRequest, service: AuthService = Depends(get_auth_service)) -> ValidateResponse:

@@ -2,7 +2,7 @@ from collections.abc import Generator
 
 from fastapi import Depends
 
-from implementation.repository import InMemoryAuthRepository
+from implementation.in_memory_auth_repository import InMemoryAuthRepository
 from interface.repository import AuthRepository
 from use_case.service import AuthService
 

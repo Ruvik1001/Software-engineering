@@ -5,3 +5,4 @@ pydantic
 pyjwt
 pytest
 pytest-cov
+load-dotenv

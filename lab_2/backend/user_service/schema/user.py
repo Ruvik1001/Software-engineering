@@ -1,8 +1,8 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, EmailStr, Field
 
 
 class CreateUserRequest(BaseModel):
-    login: str = Field(min_length=3, max_length=64)
+    login: EmailStr
     first_name: str = Field(min_length=1, max_length=64)
     last_name: str = Field(min_length=1, max_length=64)
 

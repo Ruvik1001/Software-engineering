@@ -6,5 +6,5 @@ class Task:
     id: int
     goal_id: int
     title: str
-    assignee_login: str
+    owner_id: int
     status: str

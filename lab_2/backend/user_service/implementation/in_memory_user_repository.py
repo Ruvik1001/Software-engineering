@@ -20,3 +20,4 @@ class InMemoryUserRepository:
     def by_mask(self, mask: str) -> list[User]:
         m = mask.lower()
         return [u for u in self._users.values() if m in f"{u.first_name} {u.last_name}".lower()]
+

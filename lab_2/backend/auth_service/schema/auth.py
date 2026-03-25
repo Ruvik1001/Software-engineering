@@ -1,21 +1,22 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, EmailStr, Field
 
 
 class RegisterRequest(BaseModel):
-    login: str = Field(min_length=3, max_length=64, examples=["john"])
+    login: EmailStr = Field(examples=["john@example.com"])
     password: str = Field(min_length=4, max_length=128, examples=["qwerty"])
     first_name: str = Field(min_length=1, max_length=64, examples=["John"])
     last_name: str = Field(min_length=1, max_length=64, examples=["Doe"])
 
 
 class RegisterResponse(BaseModel):
+    user_id: int
     login: str
     first_name: str
     last_name: str
 
 
 class LoginRequest(BaseModel):
-    login: str
+    login: EmailStr
     password: str
 
 
@@ -39,4 +40,4 @@ class AccessTokenResponse(BaseModel):
 
 
 class ValidateResponse(BaseModel):
-    login: str
+    user_id: int

@@ -5,4 +5,4 @@ from dataclasses import dataclass
 class Goal:
     id: int
     title: str
-    owner_login: str
+    owner_id: int

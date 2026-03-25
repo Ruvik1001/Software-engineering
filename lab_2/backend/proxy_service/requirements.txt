@@ -5,3 +5,6 @@ pydantic
 pyjwt
 pytest
 pytest-cov
+pydantic_core
+pydantic[email]
+load-dotenv
